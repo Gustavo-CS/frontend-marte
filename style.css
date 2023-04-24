@@ -20,8 +20,11 @@ div {
     align-items: center;
 }
 
-div img {
-    margin-right: 10px;
+.duas-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    max-width: 100%;
 }
 
 .colonia {
@@ -29,7 +32,7 @@ div img {
     justify-content: center;
     max-width: 50%;
     width: 50%;
-    
+
     align-self: left;
     margin-bottom: 200px;
 
@@ -40,36 +43,16 @@ div img {
     float: right;
     max-width: 50%;
     width: 50%;
-    
+
     font-size: 22px;
     margin-bottom: 200px;
 }
 
 h3 {
-    margin-top: 100px;
     margin-bottom: 25px;
 }
 
-.viagemTitulo {
-    margin-left: 50%;
-    margin-top: 200px;
-}
-
-.coloniaTitulo {
-    margin-left: 50%;
-    margin-top: 200px;
-}
-
-.testo{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center
-    
-}
-
-.testa{
+.texto-imagem {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -77,25 +60,44 @@ h3 {
 }
 
 
-.testa :nth-child(2) {
+.texto-imagem :nth-child(2) {
     display: flex;
     flex-wrap: wrap;
     align-self: start;
     align-items: start;
-    
+    flex-direction: column;
+
 }
 
-p{
+p {
     font-size: 22px;
 }
 
-h3{
+h3 {
     font-size: 30px;
 }
-.espaco{
+
+.espaco {
     margin-bottom: 20px;
 }
 
 
+@media (max-width: 1200px) {
+    .texto-imagem {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .div1 {
+        order: 2;
+    }
 
+    .div2 {
+        order: 1;
+    }
+    
+    .duas-img{
+        display: flex;
+        flex-direction: column;
+    }
+}
