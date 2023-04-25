@@ -81,6 +81,9 @@ h3 {
     margin-bottom: 20px;
 }
 
+p {
+    text-align: justify;
+}
 
 @media (max-width: 1000px) {
     .texto-imagem {
