@@ -50,7 +50,14 @@ p {
     text-align: justify; /* fazendo com que os textos estiquem para ocupar a linha toda sem deixar espaço no final*/
 }
  
-@media (max-width: 1260px){ /* adicionando uma media query para quando a tela for menor que 1260px fazer os passos seguintes */
+@media (max-width: 1230px){ /* adicionando uma media query para quando a tela for menor que 1260px fazer os passos seguintes */
+
+    p{
+        font-size: 20px; /* diminuir o tamanho da fonte para facilitar a visualização*/
+    }
+}
+
+@media (max-width: 1120px){ /* adicionando uma media query para quando a tela for menor que 1120px fazer os passos seguintes */
 
     p{
         font-size: 18px; /* diminuir o tamanho da fonte para facilitar a visualização*/
