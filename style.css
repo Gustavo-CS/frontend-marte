@@ -1,66 +1,31 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    background: rgb(191, 223, 231);
+    font-family: Arial, Helvetica, sans-serif; /* mudando a fonte padrão*/
+    font-size: large; /* aumentando o tamanho das letras em todo o body*/
+    background: rgb(191, 223, 231); /* colocando uma cor de fundo no site*/
 }
 
 h1 {
-    text-align: center;
+    text-align: center; /* alinhando o título principal no centro*/
 }
 
-img {
-    display: flex;
-    justify-content: center;
+img { /* faz com que as imagens ocupem no máximo 100% do espaço*/
     max-width: 100%;
 }
 
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.duas-img{
+.duas-img{ /* criando uma grid para dividir a tela em duas colunas com divisão igual*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    max-width: 100%;
 }
 
-.colonia {
-    display: flex;
-    justify-content: center;
-    max-width: 50%;
-    width: 50%;
-
-    align-self: left;
-    margin-bottom: 200px;
-
-}
-
-.texto-colonia {
-    align-self: right;
-    float: right;
-    max-width: 50%;
-    width: 50%;
-
-    font-size: 22px;
-    margin-bottom: 200px;
-}
-
-h3 {
-    margin-bottom: 25px;
-}
-
-.texto-imagem {
+.texto-imagem { /* criando uma grid para dividir a tela em duas colunas com divisão igual*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    max-width: 8000px;
 }
 
 
-.texto-imagem :nth-child(2) {
+.texto-imagem :nth-child(2) { /* pegando a segunda coluna da grid e criando uma flexbox, para que o conteúdo fique um abaixo do outro*/
     display: flex;
     flex-wrap: wrap;
     align-self: start;
@@ -70,37 +35,57 @@ h3 {
 }
 
 p {
-    font-size: 22px;
+    font-size: 22px; /* aumentando a fonte dos textos para 22px*/
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 30px; /* aumentando a fonte dos h3 para 30px*/
 }
 
 .espaco {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* crindo um espaçamento de 20px*/
 }
 
 p {
-    text-align: justify;
+    text-align: justify; /* fazendo com que os textos estiquem para ocupar a linha toda sem deixar espaço no final*/
+}
+ 
+@media (max-width: 1260px){ /* adicionando uma media query para quando a tela for menor que 1260px fazer os passos seguintes */
+
+    p{
+        font-size: 18px; /* diminuir o tamanho da fonte para facilitar a visualização*/
+    }
 }
 
-@media (max-width: 1000px) {
-    .texto-imagem {
-        display: flex;
-        flex-direction: column;
+@media (max-width: 1000px) { /* adicionando uma media query para quando a tela for menor que 1000px fazer os passos seguintes */
+
+    .texto-imagem { 
+        display: flex; /* alterando os textos com imagem do lado para ficarem uma abaixo da outra*/
+        flex-direction: column; 
+    }
+
+    h2, h3 {
+        text-align: center; /* alinhando os títulos no centro*/
+    }
+
+    .div2 h3{
+        align-self: center; /* alinhando os títulos da class "div2" no centro, porque por estarem dentro da div não alinharam com o código anterior*/
     }
 
     .div1 {
-        order: 2;
+        order: 2; /* alterando a ordem de aparição para que as imagens apareçam depois do texto*/
     }
 
     .div2 {
         order: 1;
     }
+
+    .ima{
+        width: 100%;
+    }
     
     .duas-img{
-        display: flex;
+        display: flex; /* alterando as imagens que ficam lado a lado em telas maiores para ficar uma abaixo da outra*/
         flex-direction: column;
     }
 }
